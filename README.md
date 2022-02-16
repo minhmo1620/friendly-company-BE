@@ -1,1 +1,1 @@
-# friendly-company
+This project is for IL181 class - Data Science for Social Good
