@@ -1,1 +1,1 @@
-This project is for IL181 class - Data Science for Social Good
+This project is a data analysis and visualization project exploring the most international worker-friendly companies in the US.
