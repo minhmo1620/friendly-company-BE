@@ -24,7 +24,7 @@ $ . env\bin\activate
 $ venv\Scripts\activate
 $ pip install -r requirements.txt
 $ export FLASK_ENV=development
-$ export FLASK_APP=web
+$ export FLASK_APP=backend_app
 $ python3 -m flask run
 ```
 
