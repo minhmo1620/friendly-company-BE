@@ -29,7 +29,7 @@ def load_expensive_data():
     all_data = {}
     for file in file_name:
         year = int(file[6:10])
-        my_path = '../data/filtered_columns_data/'
+        my_path = './filtered_columns_data/'
         new_df = clean_data(pd.read_csv(my_path + file))
         if year in all_data:
             all_data[year] = pd.concat([all_data[year], new_df], ignore_index=True)
