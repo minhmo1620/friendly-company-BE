@@ -14,17 +14,17 @@ def get_data():
 
 def load_expensive_data():
     file_name = [
-        'LCA_FY2021_Q3.csv',
-        'LCA_FY2021_Q2.csv',
-        'LCA_FY2021_Q1.csv',
-        'LCA_FY2021_Q4.csv',
+        'LCA_FY2016.csv',
+        'LCA_FY2017.csv',
+        'LCA_FY2018.csv',
         'LCA_FY2020_Q1.csv',
         'LCA_FY2020_Q2.csv',
         'LCA_FY2020_Q3.csv',
         'LCA_FY2020_Q4.csv',
-        'LCA_FY2016.csv',
-        'LCA_FY2017.csv',
-        'LCA_FY2018.csv',
+        'LCA_FY2021_Q3.csv',
+        'LCA_FY2021_Q2.csv',
+        'LCA_FY2021_Q1.csv',
+        'LCA_FY2021_Q4.csv',
     ]
     all_data = {}
     for file in file_name:
