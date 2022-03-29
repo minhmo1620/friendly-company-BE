@@ -30,6 +30,7 @@ def load_expensive_data():
     for file in file_name:
         year = int(file[6:10])
         my_path = 'app/restfulApi/filtered_columns_data/'
+        print(file)
         new_df = clean_data(pd.read_csv(my_path + file))
         if year in all_data:
             all_data[year] = pd.concat([all_data[year], new_df], ignore_index=True)
@@ -75,12 +76,12 @@ def clean_data(data):
     # data = data[data['SOC_CODE'].apply(lambda x: len(x.split('-')[0])>1)]
     
     # Big group define
-    data['BIG_GROUP_CODE'] = [int(str(i)[0:2]) for i in data.SOC_CODE]
-    data = data[data['BIG_GROUP_CODE'].isin(big_group_dict.keys())] # drop rows with weird SOC codes
-    data['BIG_GROUP_NAME'] = [big_group_dict[i] for i in data.BIG_GROUP_CODE]
+    # data['BIG_GROUP_CODE'] = [int(str(i)[0:2]) for i in data.SOC_CODE]
+    # data = data[data['BIG_GROUP_CODE'].isin(big_group_dict.keys())] # drop rows with weird SOC codes
+    # data['BIG_GROUP_NAME'] = [big_group_dict[i] for i in data.BIG_GROUP_CODE]
     
-    data['WAGE_RATE_OF_PAY_FROM'] = [convert_wage_str(i) for i in data.WAGE_RATE_OF_PAY_FROM]
-    data['WAGE_RATE_OF_PAY_TO'] = [convert_wage_str(i) for i in data.WAGE_RATE_OF_PAY_TO]
+    # data['WAGE_RATE_OF_PAY_FROM'] = [convert_wage_str(i) for i in data.WAGE_RATE_OF_PAY_FROM]
+    # data['WAGE_RATE_OF_PAY_TO'] = [convert_wage_str(i) for i in data.WAGE_RATE_OF_PAY_TO]
     
     data = data.replace({np.nan: None})
     
