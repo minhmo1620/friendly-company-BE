@@ -14,5 +14,5 @@ class CompanyViewSet(viewsets.ModelViewSet):
 class SearchViewSet(APIView):
     def get(self, request):
         company_name = dict(request.query_params)['company_name'][0]
-        approval_rate_over_years, years = get_all_charts(company_name)
-        return Response({"hi": approval_rate_over_years}, status=status.HTTP_200_OK)
+        all_stats = get_all_charts(company_name)
+        return Response({"data": all_stats}, status=status.HTTP_200_OK)
