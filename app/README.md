@@ -5,6 +5,9 @@ This is the backend Django application of the project. In this directory, we wou
 ## Setting up
 
 ```bash
+# Install Git LFS
+$ brew install git-lfs
+
 # Create virtual environment
 $ python -m venv env
 
