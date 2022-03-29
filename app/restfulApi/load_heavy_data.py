@@ -68,6 +68,7 @@ def clean_data(data):
     data = data.rename({'CASE_SUBMITTED': 'RECEIVED_DATE', 'SOC_NAME': 'SOC_TITLE'}, axis=1)
     
     # Deal with erroneous data in SOC_CODE
+    print(data.keys())
     data = data[data['SOC_CODE'].notna()]
     data = data.replace({np.nan: None})
     data = data[~data['SOC_CODE'].str.contains("[a-zA-Z]").fillna(False)]
