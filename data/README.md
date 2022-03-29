@@ -26,4 +26,7 @@ From the original dataset, we decided to only keep specific columns in our clean
 'PW_UNIT_OF_PAY'
 ```
 
-To filtered the original data to get the cleaned data, you can run ```drop_columns.ipynb```.
+To filtered the original data to get the cleaned data, you can run ```drop_columns.ipynb```. We drop database for FY 2019 because this data has different structure when compared to other years.
+
+## Company statistics
+To get the company statistic, we use the Jupyter Notebook ```company_stats.ipynb``` to explore the data and use these function in backend server to process the request.
