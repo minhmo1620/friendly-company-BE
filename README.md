@@ -19,13 +19,11 @@ An in-depth paragraph about your project and overview of use.
 ```
 $ python -m venv env
 # Activate virtual environment for MAC/UNIX
-$ . env\bin\activate
+$ . env/bin/activate
 # Activate virtual environment for WINDOWS
 $ venv\Scripts\activate
 $ pip install -r requirements.txt
-$ export FLASK_ENV=development
-$ export FLASK_APP=backend_app
-$ python3 -m flask run
+$ python3 manage.py runserver
 ```
 
 ## Help
