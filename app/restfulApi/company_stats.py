@@ -7,21 +7,32 @@ def get_all_charts(company_name):
 
     new_data = get_data_on_company(data, company_name)
 
-    approval_rate_over_years, years = get_approval_rate_over_years(new_data)
+    approval_rate_over_years, approval_rate_years = get_approval_rate_over_years(new_data)
 
-    waiting_time, years = get_waiting_time_over_years(new_data)
+    waiting_time, waiting_time_years = get_waiting_time_over_years(new_data)
 
-    applications_count, groups = get_no_applicats_per_job_industry(new_data)
+    applications_count, groups = get_no_applicants_per_job_industry(new_data[2021])
 
-    get_average_wage_per_job(job_industry=None)
+    average_wage_on_job = get_average_wage_per_job(new_data[2021])
 
-    return approval_rate_over_years, years
-
-
-
+    return {
+        "approval_rate": {
+            "approval_rate_over_years": approval_rate_over_years,
+            "years": approval_rate_years
+        },
+        "waiting_time": {
+            "waiting_time_over_years": waiting_time,
+            "years": waiting_time_years
+        },
+        "applications_count_groups": {
+            "applications_count": applications_count,
+            "groups": groups
+        },
+        "average_wage_on_job": average_wage_on_job
+    }
 
 def filter_data_by_company_name(data, company_name):
-    return data[(data.EMPLOYER_NAME == company_name) & (data.VISA_CLASS == 'H-1B')]
+    return data[(data.EMPLOYER_NAME.str.contains(company_name)) & (data.VISA_CLASS == 'H-1B')]
 
 def get_data_on_company(data, company_name):
     new_data = {}
@@ -66,9 +77,9 @@ def calculate_waiting_time(data):
             result.append((row.DECISION_DATE - row.RECEIVED_DATE).days)
     return np.mean(result)
 
-def get_no_applicats_per_job_industry(data):
+def get_no_applicants_per_job_industry(data):
     # Find all uniques groups inside the data
-    unique_groups = set(data[2021].BIG_GROUP_CODE)
+    unique_groups = set(data.BIG_GROUP_CODE)
     # Results
     applications_count = []
     
@@ -84,5 +95,55 @@ def get_no_applicats_per_job_industry(data):
 def count_applications_on_CODE(group_code, data):
     return sum(data.BIG_GROUP_CODE == group_code)
 
-def get_average_wage_per_job(job_industry):
-    pass
+def get_average_wage_per_job(data):
+    # print(data.head())
+    unique_groups = set(data.BIG_GROUP_CODE)
+    groups = {}
+
+    for group_code in unique_groups:
+        jobs, average_on_job = calculate_average_wage_per_job(data, group_code)
+        group_name = big_group_dict[group_code]
+        groups[group_name] = {
+            "jobs": jobs,
+            "average_on_job": average_on_job
+        }
+    
+    return groups
+
+def calculate_average_wage_per_job(data, group_code):
+    # Filter all applications with the same group code
+    data = data.loc[data.BIG_GROUP_CODE == group_code]
+    
+    # Find all uniques job_code
+    unique_job_titles = set(data.SOC_TITLE)
+    
+    # Get the job title based on job_code - later, if necessary
+   
+    # Calculate salary stats for each job code
+    average_on_job = []
+    jobs = []
+    for job_title in unique_job_titles:
+        jobs.append(job_title)
+        average_on_job.append(calculate_salary_stats(job_title, data))
+    
+    return jobs, average_on_job
+
+def calculate_salary_stats(job_title, data):
+    # Find all applications of specific job code
+    new_data = data.loc[data.SOC_TITLE == job_title]
+    # Collect all salaries
+    salaries = new_data.AVERAGE_WAGE
+    
+    # Mean
+    mean_salaries = np.round(np.mean(salaries))
+    
+    # Median
+    median_salaries = np.round(np.median(salaries))
+    
+    # Min, Max
+    min_salaries = min(salaries)
+    max_salaries = max(salaries)
+    
+    # 95 Confidence Interval
+    
+    return mean_salaries
