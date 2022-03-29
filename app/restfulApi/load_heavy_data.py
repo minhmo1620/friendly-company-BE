@@ -69,10 +69,10 @@ def clean_data(data):
     
     # Deal with erroneous data in SOC_CODE
     print(data.keys())
-    data = data[data['SOC_CODE'].notna()]
-    data = data.replace({np.nan: None})
-    data = data[~data['SOC_CODE'].str.contains("[a-zA-Z]").fillna(False)]
-    data = data[data['SOC_CODE'].apply(lambda x: len(x.split('-')[0])>1)]
+    # data = data[data['SOC_CODE'].notna()]
+    # data = data.replace({np.nan: None})
+    # data = data[~data['SOC_CODE'].str.contains("[a-zA-Z]").fillna(False)]
+    # data = data[data['SOC_CODE'].apply(lambda x: len(x.split('-')[0])>1)]
     
     # Big group define
     data['BIG_GROUP_CODE'] = [int(str(i)[0:2]) for i in data.SOC_CODE]
