@@ -12,6 +12,11 @@ An in-depth paragraph about your project and overview of use.
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 * ex. Windows 10
+* Please make sure you install Git LFS before cloning the repo
+```bash
+# Install Git LFS
+$ brew install git-lfs
+```
 
 ### Starting the Backend Server
 
