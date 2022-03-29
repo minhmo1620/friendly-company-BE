@@ -1,3 +1,3 @@
-web: gunicorn --bind 0.0.0.0:$PORT app.backendApi.wsgi:application --log-file - --log-level debug
+web: python3 app/manage.py runserver 0.0.0.0:$PORT
 python app/manage.py collectstatic --noinput
 app/manage.py migrate
