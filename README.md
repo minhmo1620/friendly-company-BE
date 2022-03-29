@@ -17,12 +17,21 @@ An in-depth paragraph about your project and overview of use.
 
 * Run the following code inside the main directory to run the backend server
 ```
+$ cd app
+
+# Create virtual environment
 $ python -m venv env
+
 # Activate virtual environment for MAC/UNIX
 $ . env/bin/activate
+
 # Activate virtual environment for WINDOWS
 $ venv\Scripts\activate
+
+# Install requirements package
 $ pip install -r requirements.txt
+
+# Start the project
 $ python3 manage.py runserver
 ```
 
