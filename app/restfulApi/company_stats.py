@@ -17,16 +17,37 @@ def get_all_charts(company_name):
 
     return {
         "approval_rate": {
-            "approval_rate_over_years": approval_rate_over_years,
-            "years": approval_rate_years
+            "series": {
+                "data": approval_rate_over_years,
+                "name": "Approval rate over years"
+            },
+            "options": {
+                "xaxis": {
+                "categories": approval_rate_years,
+              }
+            }
         },
         "waiting_time": {
-            "waiting_time_over_years": waiting_time,
-            "years": waiting_time_years
+            "series": {
+                "data": waiting_time,
+                "name": "Waiting time over years"
+            },
+            "options": {
+                "xaxis": {
+                "categories": waiting_time_years,
+              }
+            }
         },
         "applications_count_groups": {
-            "applications_count": applications_count,
-            "groups": groups
+            "series": {
+                "data": applications_count,
+                "name": "Number of applicants per job industry"
+            },
+            "options": {
+                "xaxis": {
+                "categories": groups,
+              }
+            }
         },
         "average_wage_on_job": average_wage_on_job
     }
@@ -104,8 +125,15 @@ def get_average_wage_per_job(data):
         jobs, average_on_job = calculate_average_wage_per_job(data, group_code)
         group_name = big_group_dict[group_code]
         groups[group_name] = {
-            "jobs": jobs,
-            "average_on_job": average_on_job
+            "series": {
+                "data": average_on_job,
+                "name": "Number of applicants per job type"
+            },
+            "options": {
+                "xaxis": {
+                "categories": jobs,
+              }
+            }
         }
     
     return groups
