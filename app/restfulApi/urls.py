@@ -1,6 +1,6 @@
 from django.urls import include, path
 from rest_framework import routers
-from .views import CompanyViewSet, SearchViewSet
+from .views import CompanyViewSet, SearchViewSet, FilterViewSet
 
 router = routers.DefaultRouter()
 router.register(r'companies', CompanyViewSet)
@@ -10,5 +10,6 @@ router.register(r'companies', CompanyViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('search/', SearchViewSet.as_view(), name='search')
+    path('search/', SearchViewSet.as_view(), name='search'),
+    path('filters/', FilterViewSet.as_view(), name='filter')
 ]

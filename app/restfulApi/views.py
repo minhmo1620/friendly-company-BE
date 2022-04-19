@@ -16,3 +16,25 @@ class SearchViewSet(APIView):
         company_name = dict(request.query_params)['company_name'][0]
         all_stats = get_all_charts(company_name)
         return Response({"data": all_stats}, status=status.HTTP_200_OK)
+
+class FilterViewSet(APIView):
+    def get(self, request):
+        query_params = dict(request.query_params)
+        job_industry = query_params['job_industry'][0]
+        state = query_params['state'][0]
+        city = query_params['city'][0]
+        job_type = query_params['job_type'][0]
+
+        companies = [
+            {
+                "name": "Google",
+                "approval_rate": "99",
+                "wage_range": [100, 200]
+            },
+            {
+                "name": "Facebook",
+                "approval_rate": "99",
+                "wage_range": [100, 200]
+            }
+        ]
+        return Response({"companies": companies}, status=status.HTTP_200_OK)
