@@ -2,15 +2,27 @@ import numpy as np
 import pandas as pd
 
 data = None
+company_stats_compilation_data = None
 
 def load_model():
-    global data
+    global data, company_stats_compilation_data
     data = load_expensive_data()
+    company_stats_compilation_data = load_company_stats_compilation_data()
 
 def get_data():
     if data is None:
         raise Exception("Expensive model not loaded")
     return data
+
+def get_company_stats_compilation_data():
+    if company_stats_compilation_data is None:
+        raise Exception("The complication data is not loaded")
+    return company_stats_compilation_data
+
+def load_company_stats_compilation_data():
+    my_path = '../data/company_stats_compilation.csv'
+    compilation_data = pd.read_csv(my_path)
+    return compilation_data
 
 def load_expensive_data():
     file_name = [
