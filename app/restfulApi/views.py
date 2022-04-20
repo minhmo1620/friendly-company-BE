@@ -23,13 +23,13 @@ class FilterViewSet(APIView):
         query_params = dict(request.query_params)
         job_industry = query_params['job_industry'][0]
         state = query_params['state'][0]
-        city = query_params['city'][0]
+        # city = query_params['city'][0]
         job_type = query_params['job_type'][0]
 
-        companies = get_companies_list(job_industry, state, city, job_type)
+        companies = get_companies_list(job_industry, state, job_type)
         return Response({"companies": companies}, status=status.HTTP_200_OK)
 
-def get_companies_list(job_industry, state, city, job_type):
+def get_companies_list(job_industry, state, job_type):
     job_type = job_type == 'Full-time'
     # Filter all companies with job_industry, state, city, job_type
     companies_lst = company_data.objects.filter(
@@ -41,7 +41,7 @@ def get_companies_list(job_industry, state, city, job_type):
     for company in companies_lst:
         entry = {}
         entry['name'] = getattr(company, 'company_name')
-        entry['approval_rate'] = getattr(company, 'approval_rate')
+        entry['approval_rate'] = float (getattr(company, 'approval_rate')) * 100
         entry['wage_range'] = [getattr(company, 'min_average'), getattr(company, 'max_average')]
         entry['average_wage'] = getattr(company, 'average')
 
