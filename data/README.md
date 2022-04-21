@@ -28,7 +28,7 @@ To understand the description of each column, please refer to ```data_codebook.p
 
 To filter the original data to get the cleaned data, you can run ```drop_columns.ipynb```. 
 
-## Data Analysis
+## Data analysis examples
 
 ### Company statistics
 To get the H1B sponsorship-related statistics of each data (e.g., LCA approval rate, LCA waiting time, average salary range), we used the Jupyter Notebook ```company_stats.ipynb``` to explore the data and use these functions in the backend server to process the request.
