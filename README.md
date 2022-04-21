@@ -4,7 +4,7 @@ This project builds a website that compiles and visualizes H1B sponsorship-relat
 
 ## Project Description
 
-This is a data analysis and visualization project that displays H1B sponsorship-related data of companies based in the US through a locally hosted website. The main source of data is the annual Labor Condition Application (LCA) Disclosure Data released by the US Department of Labor of which the 2016, 2017, 2018, 2020, and 2021 data were used. 
+This is a data analysis and visualization project that displays H1B sponsorship-related data of companies based in the US through a locally hosted website. The source of the data is the annual Labor Condition Application (LCA) Disclosure Data released by the US Department of Labor of which the 2016, 2017, 2018, 2020, and 2021 data were used. 
 
 The major search functions of the website that the users can perform include:
 - Users can use search filters to access a relevant and customized set of data by using search filters. The filters they can set include the job industry they wish to work in, the US state they wish to work in, and whether they wish to work as a full-time or part-time employer.
