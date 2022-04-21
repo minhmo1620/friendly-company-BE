@@ -18,7 +18,7 @@ The H1B sponsorship-related data per company that the users can access include:
 
 ## Run the project
 
-This website is hosted locally. To run locally, please refer to the details of the frontend ['https://github.com/KareemAlsayed1/friendly-company-FE/blob/main/README.md'] and backend ['https://github.com/minhmo1620/friendly-company/blob/main/app/README.md'] server instructions. 
+This website is hosted locally. To run locally, please refer to the details of the [frontend](https://github.com/KareemAlsayed1/friendly-company-FE/blob/main/README.md) and [backend](https://github.com/minhmo1620/friendly-company/blob/main/app/README.md') server instructions. 
 
 ### Dependencies
 
