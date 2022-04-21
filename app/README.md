@@ -23,6 +23,9 @@ $ pip install -r requirements.txt
 
 ## Run the project
 ```bash
+# If this is the first time you run the project, make sure to migrate
+$ python3 manage.py migrate
+
 # Start the project
 $ python3 manage.py runserver
 ```
