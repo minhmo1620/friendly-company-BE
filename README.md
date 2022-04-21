@@ -1,10 +1,13 @@
-# Project Title
+# Visualizing H1B-Friendly Companies
 
-Simple overview of use/purpose.
+This project builds a website that compiles and visualizes H1B sponsorship-related data for international users wishing to work in the US to easily access.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This is a data analysis and visualization project that displays H1B sponsorship-related data of companies based in the US through a locally hosted website. The main source of data is the annual Labor Condition Application (LCA) Disclosure Data released by the US Department of Labor of which the years 2016, 2017, 2018, 2020, and 2021 data were used. 
+
+The major features of the website include the following:
+- Users can access a relevant and customized set of data by using search filters, including the job industry they wish to work in, the US state they wish to work in, and whether they wish to work as a full-time or part-time employer.
 
 ## Getting Started
 
