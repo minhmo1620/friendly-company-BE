@@ -18,46 +18,14 @@ The H1B sponsorship-related data per company that the users can access include:
 
 ## Run the project
 
-This website is hosted locally. To run locally, please refer to the details of the [frontend](https://github.com/KareemAlsayed1/friendly-company-FE/blob/main/README.md) and [backend](https://github.com/minhmo1620/friendly-company/blob/main/app/README.md') server instructions. 
+This website is hosted locally. To run locally, please refer to the details of the [frontend](https://github.com/KareemAlsayed1/friendly-company-FE/blob/main/README.md) and [backend](https://github.com/minhmo1620/friendly-company/blob/main/app/README.md) server instructions. 
 
-### Dependencies
+A step-by-step tutorial on how to run the website locally can also be found here.
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* Please make sure you install Git LFS before cloning the repo
-```bash
-# Install Git LFS
-$ brew install git-lfs
-```
+### Built with
 
-### Starting the Backend Server
-
-* Run the following code inside the main directory to run the backend server
-```
-$ cd app
-
-# Create virtual environment
-$ python -m venv env
-
-# Activate virtual environment for MAC/UNIX
-$ . env/bin/activate
-
-# Activate virtual environment for WINDOWS
-$ venv\Scripts\activate
-
-# Install requirements package
-$ pip install -r requirements.txt
-
-# Start the project
-$ python3 manage.py runserver
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+- [React](https://reactjs.org/)
+- Flask?
 
 ## License
 
