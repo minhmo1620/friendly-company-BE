@@ -2,6 +2,8 @@
 
 This is the backend Django application of the project. In this directory, we would create the backend server to get the company statistic based on the data in ```data``` folders.
 
+**Please make sure your current work directory is ```app```**
+
 ## Setting up
 
 ```bash
@@ -23,9 +25,9 @@ $ pip install -r requirements.txt
 
 ## Run the project
 ```bash
-# If this is the first time you run the project, make sure to migrate
+# If this is the first time you run the project, make sure to migrate (normally takes 5 mins)
 $ python3 manage.py migrate
 
-# Start the project
+# Start the project (may take > 5 minutes to be ready)
 $ python3 manage.py runserver
 ```
