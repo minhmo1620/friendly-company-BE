@@ -131,17 +131,16 @@ The frontend and backend server of this project are in two different repos. Henc
 
 5. Open your web browser and go to the URL ```http://localhost:3000```. The expected result is
 ![welcome_page](./welcome_page.png)
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Built with
 
 - [React](https://reactjs.org/)
-- Flask?
+- [Django](https://www.djangoproject.com/start/)
+
+## Contributors
+- Minh Nguyen - minh.nguyen@uni.minerva.edu
+- Soomin Kim - soominkim25@uni.minerva.edu 
+- Kareem Alsayed - kareem@uni.minerva.edu
 
 ## License
 
