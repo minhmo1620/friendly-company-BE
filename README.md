@@ -29,6 +29,4 @@ A step-by-step tutorial on how to run the website locally can also be found here
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-Distributed under the MIT License. See *LICENSE.txt* for more information.
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+Distributed under the MIT License - see ```LICENSE.txt``` for more information.
