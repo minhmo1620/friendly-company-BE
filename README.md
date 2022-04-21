@@ -1,13 +1,17 @@
 # Visualizing H1B-Friendly Companies
 
-This project builds a website that compiles and visualizes H1B sponsorship-related data for international users wishing to work in the US to easily access.
+This project builds a website that compiles and visualizes H1B sponsorship-related data for international users wishing to work in the US to easily search and access.
 
-## Description
+## Project Description
 
-This is a data analysis and visualization project that displays H1B sponsorship-related data of companies based in the US through a locally hosted website. The main source of data is the annual Labor Condition Application (LCA) Disclosure Data released by the US Department of Labor of which the years 2016, 2017, 2018, 2020, and 2021 data were used. 
+This is a data analysis and visualization project that displays H1B sponsorship-related data of companies based in the US through a locally hosted website. The main source of data is the annual Labor Condition Application (LCA) Disclosure Data released by the US Department of Labor of which the 2016, 2017, 2018, 2020, and 2021 data were used. 
 
-The major features of the website include the following:
-- Users can access a relevant and customized set of data by using search filters, including the job industry they wish to work in, the US state they wish to work in, and whether they wish to work as a full-time or part-time employer.
+The major search functions of the website that the users can perform include:
+- Users can use search filters to access a relevant and customized set of data by using search filters. The filters they can set include the job industry they wish to work in, the US state they wish to work in, and whether they wish to work as a full-time or part-time employer.
+- Users can also directly search the name of the company and access the searched company's H1B sponsorship-related data.
+
+The H1B sponsorship-related data per company that the users can access include:
+- asdf
 
 ## Getting Started
 
