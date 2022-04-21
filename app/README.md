@@ -17,7 +17,7 @@ $ python -m venv env
 $ . env/bin/activate
 
 # Activate virtual environment for WINDOWS
-$ venv\Scripts\activate
+$ env\Scripts\activate
 
 # Install requirements package
 $ pip install -r requirements.txt
