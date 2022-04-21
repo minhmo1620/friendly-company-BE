@@ -1,3 +1,7 @@
+<p align="center">
+ <img align="center" alt="Logo" src="./logo.png" width="250"/>
+</p>
+
 # Visualizing H1B-Friendly Companies
 
 This project builds a website that compiles and visualizes H1B sponsorship-related data for international users wishing to work in the US to easily search and access.
