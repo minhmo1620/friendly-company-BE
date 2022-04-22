@@ -71,7 +71,7 @@ The frontend and backend server of this project are in two different repos. Henc
     python3 -m venv env
 
     # Activate virtual environment for MAC/UNIX
-    env/bin/activate
+    source env/bin/activate
 
     # Activate virtual environment for WINDOWS
     env\Scripts\activate
