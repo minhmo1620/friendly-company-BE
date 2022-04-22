@@ -21,6 +21,17 @@ The H1B sponsorship-related data per company that the users can access include:
 - The number of applicants sponsored by the company per job industry in 2021 (most recent data)
 - The average salary of the jobs sponsored by the company in 2021 (most recent data)
 ![company_stats_example](./img/company_plots_example.png)
+
+## Directory Structure
+    ├── app                           <- Source files and requirements
+    ├── data                          <- Data analysis codes
+    │   ├── filtered_columns_data     <- Cleaned data
+    ├── docs                          <- Documentation files
+    ├── img                           <- Image files
+    ├── LICENSE.txt
+    ├── README.md
+    └── logo.svg
+
 ## Run the project
 
 ### Run the project locally
@@ -79,12 +90,12 @@ The frontend and backend server of this project are in two different repos. Henc
     # Install requirements package
     pip3 install -r requirements.txt
 
-    # If this is the first time you run the project, make sure to migrate (normally takes 5 mins)
+    # If this is the first time you run the project, make sure to migrate (normally takes 10+ mins)
     python3 manage.py migrate
     ```
     3.2 Run the project
     ```bash
-    # Start the project (may take > 5 minutes to be ready)
+    # Start the project (may take > 10+ minutes to be ready)
     python3 manage.py runserver
     ```
     The backend server is up when the terminal shows
