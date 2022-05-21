@@ -10,6 +10,8 @@ This project builds a website that compiles and visualizes H1B sponsorship-relat
 
 This is a data analysis and visualization project that displays H1B sponsorship-related data of companies based in the US through a locally hosted website. The source of the data is the annual Labor Condition Application (LCA) Disclosure Data released by the US Department of Labor of which the 2016, 2017, 2018, 2020, and 2021 data were used. 
 
+Watch a demo of the website [here](https://www.loom.com/share/d6aabab26e6f44068160327c143e8e54).
+
 The major search functions of the website that the users can perform include:
 - Users can use search filters to access a relevant and customized set of data by using search filters. The filters they can set include the job industry they wish to work in, the US state they wish to work in, and whether they wish to work as a full-time or part-time employer.
 - Users can also directly search the name of the company and access the searched company's H1B sponsorship-related data.
@@ -21,6 +23,17 @@ The H1B sponsorship-related data per company that the users can access include:
 - The number of applicants sponsored by the company per job industry in 2021 (most recent data)
 - The average salary of the jobs sponsored by the company in 2021 (most recent data)
 ![company_stats_example](./img/company_plots_example.png)
+
+## Directory Structure
+    ├── app                           <- Source files and requirements
+    ├── data                          <- Data analysis codes
+    │   ├── filtered_columns_data     <- Cleaned data
+    ├── docs                          <- Documentation files
+    ├── img                           <- Image files
+    ├── LICENSE.txt
+    ├── README.md
+    └── logo.svg
+
 ## Run the project
 
 ### Run the project locally
@@ -79,12 +92,12 @@ The frontend and backend server of this project are in two different repos. Henc
     # Install requirements package
     pip3 install -r requirements.txt
 
-    # If this is the first time you run the project, make sure to migrate (normally takes 5 mins)
+    # If this is the first time you run the project, make sure to migrate (normally takes 10+ mins)
     python3 manage.py migrate
     ```
     3.2 Run the project
     ```bash
-    # Start the project (may take > 5 minutes to be ready)
+    # Start the project (may take > 10+ minutes to be ready)
     python3 manage.py runserver
     ```
     The backend server is up when the terminal shows
